@@ -1,32 +1,27 @@
-interface User{
-    username:string,
-    email:string,
-    password:string,
-    idade:number
-}
+import { User } from './../models/user';
 
-const user1:User = {
-    username:"Eduardo",
-    email:"eduardo@email.com",
-    password:"Eduardo@pasword123",
-    idade:19
-}
+export const users: User[] = [
+    {
+        username: "Eduardo",
+        email: "eduardo@email.com",
+        password: "Eduardo@pasword123",
+        idade: 19
+    },
+    {
+        username: "Julio",
+        email: "julio@email.com",
+        password: "Julio@pasword123",
+        idade: 17
+    },
+    {
+        username: "ana",
+        email: "Clara#email.com",
+        password: "Clara@pasword123",
+        idade: 19
+    }
+];
 
-const user2:User = {
-    username:"Julio",
-    email:"julio@email.com",
-    password:"Julio@pasword123",
-    idade:17
-}
-
-const user3:User = {
-    username:"ana",
-    email:"Clara#email.com",
-    password:"Clara@pasword123",
-    idade:19
-}
-
-function UserValidate(user:User): string[]{
+export function UserValidate(user:User): string[]{
     let errors:string[] = [];
     let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
@@ -47,5 +42,3 @@ function UserValidate(user:User): string[]{
     return errors;
 
 }
-
-console.log(UserValidate(user3));

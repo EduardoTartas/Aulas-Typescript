@@ -1,18 +1,12 @@
 import chalk from 'chalk';
 import { v4 as uuid } from "uuid";
-
-interface Product {
-    id:string,
-    name:string,
-    price:number,
-    quantity:number
-}
+import { Product } from './../models/product';
 
 const products:Product[] = [
     {id:"1234", name:"teste", price:0, quantity:10}
 ];
 
-function addProduct(name:string, price:number, quantity:number ):void{
+export function addProduct(name:string, price:number, quantity:number ):void{
     if(name.length <= 0){
         console.log(`${chalk.bold('Produto inválido')}`)
     }
@@ -28,11 +22,7 @@ function addProduct(name:string, price:number, quantity:number ):void{
     }  
 }
 
-addProduct("Coca-Cola",9 , 100);
-addProduct("Bala Halls", 3, 180);
-addProduct("Mentos", 5, 42);
-
-function removeProduct(id:string):void{
+export function removeProduct(id:string):void{
     const filteredProducts:Product[] = products.filter(products => products.id == id);
     let indexProduct:number = products.findIndex(product => product.id == id);
     
@@ -47,9 +37,7 @@ function removeProduct(id:string):void{
     }
 }
 
-//removeProduct("1234");
-
-function uptdateQuantity(id:string, quantity:number):void{
+export function uptdateQuantity(id:string, quantity:number):void{
     const filteredProducts:Product[] = products.filter(products => products.id == id);
 
     if(filteredProducts.length <= 0){
@@ -63,9 +51,7 @@ function uptdateQuantity(id:string, quantity:number):void{
     }
 }
 
-uptdateQuantity("1234", 200);
-
-function getTotalValue():number{
+export function getTotalValue():number{
     let totalValue:number = 0;
     products.forEach(product =>{
         console.log(`O valor total do estoque de ${chalk.bold(product.name)} é: R$:${chalk.bold(product.quantity * product.price)}`);
@@ -74,5 +60,3 @@ function getTotalValue():number{
     console.log(`O valor total do estoque é de: R$:${chalk.bold(totalValue)}`);
     return totalValue;
 }
-
-getTotalValue();
