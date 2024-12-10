@@ -1,6 +1,6 @@
 import { Estudante } from "./../models/estudante";
 import { Cidade } from "./../models/cidades";
-import { Estados } from "../enums/estados";
+import { Estados } from "../enums/estado";
 import { v4 as uuid } from 'uuid';
 import fs from 'fs'; 
 

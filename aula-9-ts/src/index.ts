@@ -35,6 +35,7 @@ catch(err){
 }*/
 
 import * as estudantesService from './services/estudanteService';
-import { Estados } from './enums/estados';
+import { Estados } from './enums/estado';
 
+estudantesService.addEstudante("Emilia", "123", 2, {nome: "São Paulo", estado: Estados.SP});
 estudantesService.addEstudante("Emilia", "123", 2, {nome: "São Paulo", estado: Estados.SP});

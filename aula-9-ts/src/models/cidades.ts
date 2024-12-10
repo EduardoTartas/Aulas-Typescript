@@ -1,4 +1,4 @@
-import { Estados } from '../enums/estados';
+import { Estados } from '../enums/estado';
 
 export interface Cidade {
     nome: string;
