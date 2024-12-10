@@ -14,7 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.2",
+    "uuid": "^11.0.3"
   },
-  "description": "arrays"
+  "description": "arrays",
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  }
 }
