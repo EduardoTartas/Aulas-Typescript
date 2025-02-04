@@ -15,7 +15,8 @@
     "@types/sqlite3": "^3.1.11",
     "nodemon": "^3.1.9",
     "sqlite3": "^5.1.7",
-    "tsc-node": "^0.0.3"
+    "tsc-node": "^0.0.3",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.10",
